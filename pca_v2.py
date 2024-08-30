@@ -3,6 +3,10 @@ import cv2
 import streamlit as st 
 from sklearn.decomposition import PCA  
 import os, random  
+import sys
+
+sys.path.insert(1, "utils")
+
 from utils import get_image_list, load_image, apply_pca
 
 st.set_page_config(layout="wide")
