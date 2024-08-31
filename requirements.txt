@@ -1,9 +1,11 @@
+setuptools==74.0.0
+Distutils==1.0
 streamlit==1.36.0
 numpy==1.23.5
 Pillow==10.0.0
 matplotlib==3.5.1
 opencv-python-headless==4.6.0.66
 scikit-learn==1.3.0
-python3-distutils
-pip==24.2
+# python3-distutils
+
 
