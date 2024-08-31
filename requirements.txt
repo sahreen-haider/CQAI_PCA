@@ -1,5 +1,5 @@
 setuptools==74.0.0
-Distutils==1.0
+distutils-pytest==0.2.1
 streamlit==1.36.0
 numpy==1.23.5
 Pillow==10.0.0
