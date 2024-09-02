@@ -1,0 +1,1 @@
+web: sh setup.sh && streamlit run pca_v2.py
