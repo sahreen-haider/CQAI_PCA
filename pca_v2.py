@@ -1,6 +1,6 @@
 import numpy as np  
 import cv2  
-import streamlit as st 
+import streamlit as st
 from sklearn.decomposition import PCA  
 import os, random  
 import sys
@@ -34,6 +34,7 @@ else:
 
 # Split the image into its blue, green, and red channels (BGR format)
 blue, green, red = cv2.split(image)
+
 st.sidebar.write(blue.shape)
 
 # Perform PCA on the blue channel to calculate explained variance
