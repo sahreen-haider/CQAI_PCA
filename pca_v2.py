@@ -2,7 +2,7 @@ import numpy as np
 import cv2  
 import streamlit as st
 from sklearn.decomposition import PCA  
-import os, random  
+import os, random
 import sys
 
 sys.path.insert(1, "utils")
@@ -19,6 +19,7 @@ st.title("Usage of Principal Component Analysis (PCA) in Image Compression")
 
 # Sidebar widget for file upload with a label for accessibility
 uploaded_file = st.sidebar.file_uploader("Upload an image", type=['jpg', 'png', 'jpeg', 'tiff', 'bmp'], label_visibility="collapsed")
+
 
 if uploaded_file is not None:
     st.sidebar.info(f"File uploaded: {uploaded_file.name}")
@@ -47,6 +48,7 @@ cumulative_variance = np.cumsum(explained_variance_ratio)
 # Function to generate a slider label with the number of components and variance information
 def slider_label(components):
     return f"Number of PCA Components: {components}, Variance Preserved: {cumulative_variance[components-1]:.2%}"
+
 
 # Create a slider for selecting the number of PCA components, with the variance information displayed
 pca_components = st.slider(slider_label(20), 1, blue.shape[0], 20, format="%d")
